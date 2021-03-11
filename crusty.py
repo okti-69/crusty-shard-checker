@@ -20,22 +20,22 @@ while True:
     else:
         webhook = Webhook.partial(id_webhooka, token_webhooka,
         adapter=RequestsWebhookAdapter())
-        webhook.send(stan_sharda_1)
+        webhook.send("SHARD 1:", stan_sharda_1.replace("<", "   ").replace(">", "   ").replace("br", "   "))
     if stan_sharda_1.find("pali") == -1:
         continue
     else:
         webhook = Webhook.partial(id_webhooka, token_webhooka,
         adapter=RequestsWebhookAdapter())
-        webhook.send(stan_sharda_1)
+        webhook.send("SHARD 1:", stan_sharda_1.replace("<", "   ").replace(">", "   ").replace("br", "   "))
     if stan_sharda_2.find("niestabilny") == -1:
         continue
     else:
         webhook = Webhook.partial(id_webhooka, token_webhooka,
         adapter=RequestsWebhookAdapter())
-        webhook.send(stan_sharda_2)
+        webhook.send("SHARD 2:", stan_sharda_2.replace("<", "   ").replace(">", "   ").replace("br", "   "))
     if stan_sharda_1.find("pali") == -1:
         continue
     else:
         webhook = Webhook.partial(id_webhooka, token_webhooka,
         adapter=RequestsWebhookAdapter())
-        webhook.send(stan_sharda_2)
+        webhook.send("SHARD 2:", stan_sharda_2.replace("<", "   ").replace(">", "   ").replace("br", "   "))
