@@ -8,6 +8,14 @@ token_webhooka = "TU TOKEN WEBHOOKA"
 import requests
 from discord import Webhook, AsyncWebhookAdapter, RequestsWebhookAdapter
 import aiohttp
+x = requests.post("http://crusty.pl")
+stan_sharda_1 = x.text[13160:13270]
+stan_sharda_2 = x.text[13520:13610]    
+webhook = Webhook.partial(id_webhooka, token_webhooka,
+adapter=RequestsWebhookAdapter())
+webhook.send("-----------------------------------------------------------------------------------------")
+webhook.send("SHARD 1:" + stan_sharda_1.replace("<", "   ").replace(">", "   ").replace("br", "   "))
+webhook.send("SHARD 2:" + stan_sharda_2.replace("<", "   ").replace(">", "   ").replace("br", "   "))
 while True:
     x = requests.post("http://crusty.pl")
     stan_sharda_1 = x.text[13160:13270]
